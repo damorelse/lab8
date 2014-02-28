@@ -17,7 +17,20 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->        
 </head>
-
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='82810634-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
 <body>
 	<div class="container">
 		<div class="jumbotron">
@@ -177,21 +190,21 @@
 			</div>
 			</div>
 		{{else}}
-
-		{{/if}}
-		<h4>Projects</h4>
-		{{#each projects}}
-			<div class="project" id="{{id}}">
-				<div class="thumbnail">
-					<a href="/project/{{id}}">
-						<img src="images/{{image}}" alt="Lorem Pixel image" class="img-responsive">
-						<h4>{{title}}</h4>
-					</a>
-					<div class="likeCtr"><button class="btn btn-default likeBtn">Like</button></div>
-					<div class="details"></div>
+			<h4>Projects</h4>
+			{{#each projects}}
+				<div class="project" id="{{id}}">
+					<div class="thumbnail">
+						<a href="/project/{{id}}">
+							<img src="images/{{image}}" alt="Lorem Pixel image" class="img-responsive">
+							<h4>{{title}}</h4>
+						</a>
+						<div class="likeCtr"><button class="btn btn-default likeBtn">Like</button></div>
+						<div class="details"></div>
+					</div>
 				</div>
-			</div>
-		{{/each}}
+			{{/each}}
+		{{/if}}
+		
 
 
 	<script src="https://code.jquery.com/jquery.js"></script>
@@ -203,7 +216,7 @@
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-48521087-1', { 'cookieDomain': 'none' });
+	  ga('create', 'UA-48521087-1', 'gpai8.herokuapp.com');
 	  ga('send', 'pageview');
 
 	</script>
